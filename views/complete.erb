@@ -41,6 +41,35 @@
         
         <h2 class="mt-2 pb-4 ">送信内容</h2>
         
+        <% company = params['company'] %>
+        <% name = params['name'] %>
+        <% mail = params['mail'] %>
+        <% tel = params['tel'] %>
+        <% content = params['content'].gsub(/\r\n|\r|\n/, "<br>") %>
+        
+        
+        <table class="table">
+        <tr>
+          <th>会社名</th>
+          <td><%= company %></td>
+        <tr>
+　　　　<tr>
+          <th>氏名</th>
+          <td><%= name %></td>
+        <tr>
+        <tr>
+          <th>メール</th>
+          <td><%= mail %></td>
+        <tr>
+        <tr>
+          <th>電話番号</th>
+          <td><%= tel %></td>
+        <tr>
+        <tr>
+          <th>内容</th>
+          <td><%= content %></td>
+        <tr>
+        </table>
         
         <div class="text-center mb-4">
             <!-- 「戻る」ボタンを緑色にする設定を追加 -->
